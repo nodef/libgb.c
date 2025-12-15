@@ -1,0 +1,26 @@
+{
+  "name": "libgb.c",
+  "version": "1.2021.3",
+  "description": "gb single-file public domain libraries for C & C++; gingerBill (2015).",
+  "keywords": [
+    "c",
+    "library",
+    "single-file",
+    "header-only",
+    "public-domain",
+    "gingerBill"
+  ],
+  "homepage": "https://github.com/nodef/libgb.c#readme",
+  "bugs": {
+    "url": "https://github.com/nodef/libgb.c/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodef/libgb.c.git"
+  },
+  "license": "CC0-1.0",
+  "main": "gb.h",
+  "dependencies": {
+    "stb.c": "^2.17.1"
+  }
+}
