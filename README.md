@@ -37,36 +37,18 @@ And then include `gb.h`, and related, as follows:
 int main() { /* ... */ }
 ```
 
-And then compile with `clang` or `gcc` as usual.
+Finally, compile while adding the path `node_modules/libgb.c` to your compiler's include paths.
 
 ```bash
-$ clang main.c  # or, use gcc
-$ gcc   main.c
+$ clang -I./node_modules/libgb.c -I./node_modules/stb.c main.c  # or, use gcc
+$ gcc   -I./node_modules/libgb.c -I./node_modules/stb.c main.c
 ```
 
-You may also use a simpler approach:
-
-```c
-// main.c
-#define GB_IMPLEMENTATION
-#include <gb/gb.h>
-#define GB_MATH_IMPLEMENTATION
-#include <gb/gb_math.h>
-#define GB_STRING_IMPLEMENTATION
-#include <gb/gb_string.h>
-#define GB_INI_IMPLEMENTATION
-#include <gb/gb_ini.h>
-#define GBGL_IMPLEMENTATION
-#include <gb/gb_gl.h>
-
-int main() { /* ... */ }
-```
-
-If you add the path `node_modules/libgb.c` to your compiler's include paths.
+You may also use a simpler approach with the [cpoach](https://www.npmjs.com/package/cpoach.sh) tool, which automatically adds the necessary include paths of all the installed dependencies for your project.
 
 ```bash
-$ clang -I./node_modules/libgb.c main.c  # or, use gcc
-$ gcc   -I./node_modules/libgb.c main.c
+$ cpoach clang main.c  # or, use gcc
+$ cpoach gcc   main.c
 ```
 
 <br>
@@ -107,6 +89,7 @@ I may change it in the future but at the moment it is like this this:
 <br>
 
 
+[![](https://raw.githubusercontent.com/qb40/designs/gh-pages/0/image/11.png)](https://wolfram77.github.io)<br>
 [![SRC](https://img.shields.io/badge/src-repo-green?logo=Org)](https://github.com/gingerBill/gb)
 [![ORG](https://img.shields.io/badge/org-nodef-green?logo=Org)](https://nodef.github.io)
 ![](https://ga-beacon.deno.dev/G-RC63DPBH3P:SH3Eq-NoQ9mwgYeHWxu7cw/github.com/nodef/libgb.c)

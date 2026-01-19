@@ -1,6 +1,6 @@
 {
   "name": "libgb.c",
-  "version": "1.2021.3",
+  "version": "1.2021.4",
   "description": "gb single-file public domain libraries for C & C++; gingerBill (2015).",
   "keywords": [
     "c",
